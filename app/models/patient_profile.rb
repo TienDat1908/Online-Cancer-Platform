@@ -18,4 +18,6 @@
 
 class PatientProfile < ApplicationRecord
   belongs_to :user
+
+  validates :cancer_type, :stage, :diagnosis_date, presence: true
 end

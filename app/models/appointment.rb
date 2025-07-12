@@ -20,4 +20,11 @@
 class Appointment < ApplicationRecord
   belongs_to :user
   belongs_to :doctor
+
+  enum status: {
+    pending: "pending",
+    confirmed: "confirmed",
+    completed: "completed",
+    cancelled: "cancelled"
+  }
 end

@@ -11,6 +11,11 @@
 #  description  :text
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  admin_id     :integer          not null
+#
+# Indexes
+#
+#  index_organizations_on_admin_id  (admin_id)
 #
 
 require "test_helper"
