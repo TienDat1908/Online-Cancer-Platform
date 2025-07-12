@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-ruby '3.4.2'
+ruby "3.4.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 8.0', '>= 8.0.2'
+gem "rails", "~> 8.0", ">= 8.0.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 # Use postgresql as the database for Active Record
@@ -21,7 +21,7 @@ gem "cssbundling-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
-# gem "redis", ">= 4.0.1"
+gem "redis"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -52,9 +52,11 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "listen", "~> 3.8"
 
   # Highlight the fine-grained location where an error occurred [https://github.com/ruby/error_highlight]
-  gem "error_highlight", ">= 0.4.0", platforms: [ :ruby ]
+  gem "error_highlight"
+  gem "annotate"
 end
 
 group :test do
@@ -63,5 +65,11 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem 'devise'
-gem 'webpacker'
+gem "devise"
+gem "webpacker"
+gem "sass-rails", "~> 6.0"
+gem "pry"
+gem "simple_form"
+gem "jsonb_accessor"
+gem "sidekiq", "~> 6.5"
+gem "sidekiq-scheduler", "~> 5.0"
