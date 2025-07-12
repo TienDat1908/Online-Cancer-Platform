@@ -12,8 +12,8 @@ class User < ApplicationRecord
   has_many :articles, foreign_key: :author_id, dependent: :destroy
   has_many :appointments, dependent: :destroy
 
-  enum role: { user: "user", doctor: "doctor", admin: "admin" }
-  enum gender: { male: "male", female: "female", other: "other" }
+  enum :role, { user: "user", doctor: "doctor", admin: "admin" }
+  enum :gender, { male: "male", female: "female", other: "other" }
 
   validates :name, presence: true
 end
